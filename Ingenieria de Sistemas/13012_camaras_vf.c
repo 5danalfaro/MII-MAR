@@ -80,6 +80,7 @@ queue_totalizador (void *args)
       af->total = af->normal + af->vips;
       printf ("VIPs: %d     Normal: %d    Total: %d\n", af->vips, af->normal,
           af->total);
+      system("clear");
 
       if (!strcmp (buffer, MSG_STOP))
         {
@@ -194,6 +195,7 @@ main (int argc, char **argv)
   pthread_join (vip_cam, NULL);
   pthread_join (totalizer, NULL);
 
+  system("clear");
   printf ("FIN\n");
   printf ("RECUENTO FINAL\nVIPs: %d     Normal: %d    Total: %d\n", af->vips, af->normal,
   af->total);
